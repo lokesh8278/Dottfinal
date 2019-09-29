@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <title>Staff Menu</title>
+  <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+</script>
+<link type="text/css" rel="stylesheet" href="css/main.css"></link>
+<link type="text/css" rel="stylesheet" href="css/staffmain.css"></link>
+
+ 
+</head>
+<body onload="loadEnquiry(this),eaa();">
+
+<nav class="navbar navbar-inverse" >
+ <div class="container">
+  <img alt="" src="head1.jpg">
+</div>
+  <div class="container-fluid">
+  
+     <ul class="nav navbar-nav">
+        <li id="EnquiryTab"><a style="cursor:pointer;" onclick="loadEnquiry(this),aa();">Enquiry</a></li>
+        <li id="BookingsTab" ><a style="cursor:pointer;" onclick="loadBookings(this),baa();">Bookings</a></li>
+        <li id="PaymentsTab"><a style="cursor:pointer;" onclick="loadPayments(this),paa();">Payments</a></li>
+        <li id="packagesTab" ><a style="cursor:pointer;" onclick="loadPackages(this);">Packages</a></li>
+   		<li id="invoiceTab"><a style="cursor:pointer;" onclick="loadInvoice(this);">Invoice</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="Login.jsp"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      </ul>
+    
+  </div>
+</nav>  
+     
+
+ 
+	<div id="Packages" class="container-fluid text-center"> 
+    <div class="row content">
+  
+	
+	
+     
+   
+    <div  class="col-sm-12 text-left" id="aa"> 
+    <div class="containe-2">
+
+        <div class="containe-2-box">
+            <table id="showpack">
+                <tr>
+                    <th style="width: 45%" id="hh1">
+                        <h3>Tour Id </h3>
+                    </th>
+                    <th id="hh2"> </th>
+                </tr>
+                <tr>
+                    <td> <label>Date of Travel:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td> <label>No Of Passengers:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td> <label>No Of Adult:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td> <label>No Of Child:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td> <label>Tour Cost Per Adult:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td> <label> With Twin Share Base:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td> <label>With Triple Share Base:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td> <label>Child With Bed:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td> <label>Child Without Bed:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td> <label>Infant Cost:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td> <label>No Of Days:</label></td>
+                    <td>:</td>
+                </tr>
+
+                <tr>
+                    <td> <label>Countries Visiting:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center" colspan="2"> <label>Optional Tour.......</label></td>
+
+                </tr>
+
+                <tr>
+                    <td> <label>Description:</label></td>
+                    <td>:</td>
+                </tr>
+
+                <tr>
+                    <td> <label>Per Child:</label></td>
+                    <td>:</td>
+                </tr>
+
+                <tr>
+                    <td> <label>Per Adult:</label></td>
+                    <td>:</td>
+                </tr>
+
+                <tr>
+                    <td> <label>Per Infant:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td></td>
+                </tr>
+            </table>
+
+        </div>
+
+</div>
+</div>
+    </div>
+ </div>
+
+
+   <div id="Bookings" class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-md-2 sidenav">
+	
+	 <p><button type="button" onclick="baa()" class="btn btn-link"  >New Booking</button></p>
+	<p><button type="button" onclick="bcc()" class="btn btn-link">View Bookings</button></p>
+	<hr>
+	<hr>
+	<div id="newsearch">
+	<p><label> BY Mobile Number</label><input type="number" placeholder="Mobile Number"> </p>
+	<p> <input type="number" placeholder="BY Id"></p>
+	<p><input type="submit" value="serch"></p> 
+    </div>
+	</div>
+	
+	
+    <div class="col-sm-10 text-left" id="baa"> 
+      <form class="table-responsive" >
+	  
+  <table  class="New_package" >
+  <tr>
+<th id="h" align="right">
+  New Booking
+  </th>
+  <th id="tha">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="reset" class="ID1">
+          <span class="glyphicon glyphicon-refresh">
+          </span> CLEAR
+        </button>
+		<button type="button" class="ID1" class="close">
+          <span class="glyphicon glyphicon-remove" id="ap">
+          </span> CLOSE
+        </button>
+		</th>
+ </tr>
+
+<tr>
+<td>  <label>Select Package </label> </td>
+	<td>: <select>
+					<option value="">hjsba</option>
+					<option value="">hjsba</option>
+					<option value="">hjsba</option>
+					<option  value="">hjsba</option>
+					<option value="">hjsba</option>
+			</select>
+					
+	
+	
+	</td>
+	</tr>
+<tr>
+  <td> <label>Client Name </label> </td>
+<td>: <input type="text" name="CLIENT_NAME" required></td> 
+</tr>
+ <tr>
+  <td><label>Contact Number</label>
+</td>
+<td>: <input type="number" name="CONTACT_NUMBER" required></td>
+  </tr>
+  <tr>
+ <td> <label>Gmail Id</label></td>
+<td>: <input type="text" name="GMAIL_ID" required></td>
+  </tr>
+  
+  
+  <tr>
+  <td><label>Destination</label></td>
+<td>: <input type="text" name="DESTINATION" required> </td>
+  </tr>
+  
+<tr>
+  <td colspan="2"><hr><label>Address</label><hr></td>
+  </tr>
+  <tr>
+  <td > <label>door no/house no</label></td><td ><input type="text" name="DESTINATION" required></td>
+  </tr>
+	<tr><td ><label>Street name :</label>:</td><td ><input type="text" name="DESTINATION" required></td></tr>
+	<tr><td ><label>City :</label></td><td ><input type="text" name="DESTINATION" required></td></tr> 
+	<tr><td ><label>State :</label></td><td ><input type="text" name="DESTINATION"required></td></tr>
+	<tr><td ><label>Pin code :</label></td> <td ><input type="text" name="DESTINATION" required></td>
+
+  </tr>
+  
+  <tr>
+  <td><label>Adult </label></td>
+<td>:
+
+<select id="adult">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+			</select>
+			 </td>
+  </tr>
+  <tr>
+  <td><label> Child </label></td>
+<td>:
+ <select id="child">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+			</select> <label >With Bed
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label></td>
+  </tr>
+  <tr>
+  <td><label> Infant</label></td>
+<td>:
+ <select id="infant">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option> 
+					<option value="5">5</option>
+			</select> </td>
+  </tr>
+   <tr>
+<td colspan="2" align="center">
+ <button id="btnn"button onclick="myFunction()">Next</button></td>
+</tr>
+</table>
+
+
+
+
+	</form>
+    </div>
+	
+	<div class="col-sm-10 text-left" id="bbb" > 
+      <div><table id="demo">
+	<tr><th> Passport Details</th> <th></th></tr>
+		
+
+	</table>
+  </div>
+    </div>
+	
+	<div class="col-sm-10 text-left" id="bcc"> 
+     hjhbjhbjknkjnk
+  
+    </div>
+	
+	
+	</div>
+	
+   </div>
+
+   
+   
+	<div id="Payments" class="container-fluid text-center">    
+	<div class="row content">
+    <div class="col-md-2 sidenav">
+	<p><button type="button" onclick="paa()" class="btn btn-link"  >Get Payment</button></p>
+	<p><button type="button" onclick="pbb()" class="btn btn-link">View Payments</button></p>
+	
+	<hr>
+	<hr>
+	<form id="newsearch">
+	<p><label> BY Mobile Number</label><input type="number" placeholder="Mobile Number"> </p>
+	<p> <input type="number" placeholder="BY Id"  required></p>
+	<p><input type="submit" value="serch" ></p>
+	
+	
+	</form>
+	
+     
+    </div>
+    
+    <div class="col-md-10 text-left" id="paa"> 
+   <form>
+   <hr id="dhr">
+	<label>Amount</label><input type="text" name="Updatestaffid" style="margin-right:20px;margin-left:10px;">
+<label>	By:</label><input type="text" name="Updateped" style="margin-right:20px;margin-left:10px;">
+ 
+	
+	
+<button type="submit" class="btn btn-info"  style="background-color color:#FF4500; margin-right:30px;">Update</button>
+<hr id="dhr">
+</form>
+
+<div id="div1">
+<table id="table1">
+<tr>
+	
+    <th id="a1">Id</th>
+
+    <th id="a2">Name</th>
+	<th id="a4">Total Ammount</th>
+	<th id="a5">Paid</th>
+	<th id="a6">Balance</th>
+	
+   
+</tr>
+
+</table>
+</div>
+
+<div id="div2">
+<table id="table2">
+<tr>
+	<th id="a1">105</th>
+
+    <th id="a2">hjbjh</th>
+	<th id="a4">100000</th>
+	<th id="a5">60000</th>
+	<th id="a6">40000</th>
+	
+   
+</tr>
+</table>
+
+</div>
+    </div>
+    
+    <div class="col-sm-10 text-left" id="pbb"> 
+   <div id="div1">
+<table id="table1">
+<tr>
+	
+    <th id="a1">Id</th>
+
+    <th id="a2">Name</th>
+	<th id="a4">Total Ammount</th>
+	<th id="a5">Paid</th>
+	<th id="a6">Balance</th>
+	
+   
+</tr>
+
+</table>
+</div>
+
+<div id="div2">
+<table id="table2">
+<tr>
+	<th id="a1">105</th>
+
+    <th id="a2">hjbjh</th>
+	<th id="a4">100000</th>
+	<th id="a5">60000</th>
+	<th id="a6">40000</th>
+	
+   
+</tr>
+</table>
+
+</div>
+   
+
+
+
+    </div>
+    </div>
+    </div>
+
+
+ 
+<div id="Enquiry" class="container-fluid text-center">    
+
+   
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+	<p><button type="button" onclick="eaa()" class="btn btn-link"  >New Enquiry</button></p>
+	<p><button type="button" onclick="ebb()" class="btn btn-link">View Enquiry</button></p>
+	
+	
+	
+     
+    </div>
+      <div class="col-sm-10 text-left" id="eaa"> 
+      <div class="table-responsive" >
+  <table  class="New_package" >
+  <tr>
+<th id="h" align="right">
+  New Enquiry
+  </th>
+  <th id="tha">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="button" class="ID1">
+          <span class="glyphicon glyphicon-refresh">
+</span> CLEAR
+        </button>
+		<button type="button" class="ID1" class="close">
+          <span class="glyphicon glyphicon-remove" id="ap">
+</span> CLOSE
+        </button>
+		</th>
+ </tr>
+<tr>
+	<td>  <label>DATE_OF_QUERY</label> </td>
+	<td>: <input type="date" name="DATE_OF_QUERY" required></td>
+</tr>
+<tr>
+  <td> <label>CLIENT_NAME </label> </td>
+<td>: <input type="text" name="CLIENT_NAME" required></td> 
+</tr>
+ <tr>
+  <td><label>CONTACT_NUMBER</label>
+</td>
+<td>: <input type="number" name="CONTACT_NUMBER" required></td>
+  </tr>
+  <tr>
+ <td> <label>EMAIL_ID</label></td>
+<td>: <input type="text" name="EMAIL_ID" required></td>
+  </tr>
+  
+  
+  <tr>
+  <td><label>DESTINATION</label></td>
+<td>: <input type="text" name="DESTINATION" required> </td>
+  </tr>
+  <tr>
+  <td><label>DATE_OF_TRAVEL</label></td>
+<td>: <input type="date" name="DATE_OF_TRAVEL" required ></td>
+  </tr>
+  <tr>
+  <td><label>CURRENT_STATUS_OF_THE_QUERY </label></td>
+<td>: <input type="text"  name="CURRENT_STATUS_OF_THE_QUERY" required></td>
+  </tr>
+  <tr>
+  <td><label>EXPECTED_CLOSURE_DATE</label></td>
+<td>: <input type="date" name="EXPECTED_CLOSURE_DATE" required></td>
+</tr>
+  <tr>
+  <td><label>REMARKS</label></td>
+<td> : <input type="text" name="REMARKS" required> </td></tr>
+   <tr>
+<td colspan="2" align="center">
+<button type="button" class="btn btn-info" style="background-color color:#FF4500; width:10%;">&nbsp Add &nbsp</button></td>
+</tr>
+</table>
+	</div>
+    </div>
+	
+	
+	
+	
+	
+	
+	<div class="col-sm-10 text-left" id="ebb">
+	<br><br><br><br>
+<div id="div1">
+<table id="table1">
+<tr>
+	
+    <th id="a1">SNO</th>
+   
+	<th id="a3">DATE_OF_QUERY</th>
+    <th id="a4">CLIENT_NAME</th>
+	<th id="a5">NO_OF_PAX</th>
+    <th id="a6">CONTACT_NO</th>
+	<th id="a7">EMAIL_ID</th>
+    <th id="a8">DESTINATION</th>
+	<th id="a9">DATE_OF_TRAVEL</th>
+    <th id="a10">STATUS_OF_THE_QUERY</th>
+	<th id="a11">CLOSURE_DATE</th>
+    <th id="a12">REMARKS</th>
+</tr>
+
+</table>
+</div>
+
+<div id="div2">
+<table id="table2">
+<tr>
+	<td id="a1">1</td>
+	
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">22/12/2019</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">22/12/2019</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+</table>
+</div>
+</div>
+   </div>
+   
+
+
+   </div>
+
+</div>  
+   
+   
+   
+     
+   
+   
+   
+   
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+
+
+</body>
+
+<script>
+  
+  function addActive(elem){
+	  elem.addClass( "active" );
+  }
+  function removeActive(elem){
+	  elem.removeClass( "active" );
+  }
+   function loadEnquiry(event){
+	  $('#Enquiry').show();
+	  $('#Bookings').hide();
+	   $('#Payments').hide();
+	  $('#Packages').hide();
+	  $('#invoice').hide();
+	  addActive($('#EnquiryTab'));
+	  removeActive($('#BookingsTab'));
+	  removeActive($('#PackagesTab'));
+	  removeActive($('#PaymentsTab'));
+	  removeActive($('#invoiceTab'));
+	  
+  }
+  
+ 
+  function loadBookings(event){
+	 $('#Enquiry').hide();
+	  $('#Bookings').show();
+	   $('#Payments').hide();
+	  $('#Packages').hide();
+	  $('#invoice').hide();
+	  addActive($('#BookingsTab '));
+	  removeActive($('#EnquiryTab'));
+	  removeActive($('#PackagesTab'));
+	  removeActive($('#PaymentsTab'));
+	  removeActive($('#invoiceTab'));
+	 }
+  function loadPayments(event){
+	 $('#Enquiry').hide();
+	  $('#Bookings').hide();
+	   $('#Payments').show();
+	  $('#Packages').hide();
+	  $('#invoice').hide();
+	  addActive($('#PaymentsTab'));
+	  removeActive($('#EnquiryTab'));
+	  removeActive($('#PackagesTab'));
+	  removeActive($('#BookingsTab'));
+	  removeActive($('#invoiceTab'));
+	 }
+	 
+  function loadPackages(event){
+	 $('#Enquiry').hide();
+	  $('#Bookings').hide();
+	   $('#Packages').show();
+	  $('#Payments').hide();
+	  $('#invoice').hide();
+	  addActive($('#PackagesTab'));
+	  removeActive($('#EnquiryTab'));
+	  removeActive($('#PaymentsTab'));
+	  removeActive($('#BookingsTab'));
+	  removeActive($('#invoiceTab'));
+	 }
+  </script>
+  <script>
+function aa()
+{
+ var x = document.getElementById("aa");
+var y= document.getElementById("bb");
+ y.style.display="none";
+    x.style.display = "block";
+}
+function bb()
+{
+ var x = document.getElementById("bb");
+var y = document.getElementById("aa");
+y.style.display="none";
+x.style.display = "block";
+}
+/*paymant*/
+function paa()
+{
+ var x = document.getElementById("paa");
+var y= document.getElementById("pbb");
+ y.style.display="none";
+    x.style.display = "block";
+}
+function pbb()
+{
+ var x = document.getElementById("pbb");
+var y = document.getElementById("paa");
+y.style.display="none";
+x.style.display = "block";
+}
+
+
+
+function eaa()
+{
+ var x = document.getElementById("eaa");
+var y= document.getElementById("ebb");
+ y.style.display="none";
+    x.style.display = "block";
+}
+function ebb()
+{
+ var x = document.getElementById("ebb");
+var y = document.getElementById("eaa");
+y.style.display="none";
+x.style.display = "block";
+}
+</script>
+<script>
+function baa()
+{
+ var x = document.getElementById("baa");
+var y= document.getElementById("bbb");
+var z= document.getElementById("bcc");
+ y.style.display="none";
+    x.style.display = "block";
+    z.style.display="none";
+}
+function bbb()
+{
+ var x = document.getElementById("bbb");
+var y = document.getElementById("baa");
+var z= document.getElementById("bcc");
+y.style.display="none";
+z.style.display="none";
+x.style.display = "block";
+}
+function bcc()
+{
+ var x = document.getElementById("baa");
+var y= document.getElementById("bbb");
+var z= document.getElementById("bcc");
+ y.style.display="none";
+    x.style.display = "none";
+    z.style.display="block";
+}
+</script>
+<script>
+  
+    function myFunction() {
+      var x = document.getElementById("bbb");
+    var y = document.getElementById("baa");
+     var a = parseInt(document.getElementById("adult").value);
+     a+=parseInt(document.getElementById("child").value);
+     a+=parseInt(document.getElementById("infant").value);
+     var str="";
+      for (i = 1; i <= a; i++) {
+                    str += '<tr><td> <label>Name as per passport </label> </td><td>: <input type="text" name="CLIENT_NAME" id="client'+i+'"></td> </tr><tr><td> <label>Surname </label> </td><td>: <input type="text" name="CLIENT_NAME" id="CLIENT_NAME'+i+'"></td> </tr><tr><td> <label>Given name </label> </td><td>: <input type="text" name="CLIENT_NAME" id="given_name'+i+'"></td> </tr><tr><td> <label>Date of birth </label> </td><td>: <input type="date" name="CLIENT_NAME" id="dob'+i+'"></td> </tr><tr><td> <label>Passport number </label> </td><td>: <input type="text" name="CLIENT_NAME" id="passport_no'+i+'"></td> </tr><tr><td> <label>Passport issue date </label> </td><td>: <input type="date" name="CLIENT_NAME" id="passport_issue_date'+i+'"></td> </tr><tr><td> <label>Passport expiry date </label> </td><td>: <input type="date" name="CLIENT_NAME"id="passport_expiry_date'+i+'" ></td> </tr><tr><td> <label>Place of issue </label> </td><td>: <input type="text" name="CLIENT_NAME" id="place_of_issue'+i+'"></td> </tr><tr><td> <label>Nationality </label> </td><td>: <input type="text" name="CLIENT_NAME" id="nationality'+i+'"></td> </tr><tr><td colspan="2" align="center"> <hr></hr></td></tr>';
+                }
+    
+    
+    var b='<tr><td colspan="2" align="center"><button type="button" id="bbb" style="background-color color:#FF4500;" onclick="f1()">Submit</button></td></tr>';
+    document.getElementById("demo").innerHTML+=(str);
+    document.getElementById("demo").innerHTML+=(b);
+    y.style.display="none";
+    x.style.display = "block";
+              }
+    
+    
+    </script>
+  </html>

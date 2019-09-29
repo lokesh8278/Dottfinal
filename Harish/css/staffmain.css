@@ -1,0 +1,159 @@
+ input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      height: 100%;
+    }
+  .container {
+      margin-top: 0;
+      border-radius: 0;
+      margin-left: 0;
+      margin-right: 0;
+     width: 100%;
+    }  
+    
+ img{
+ margin-top: 0;
+ padding-left:5px;
+  height: 200px;
+  width: 100%;
+ }   
+    
+    .row.content {height: 850px;}
+    
+    
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+	 // width:250px;
+	  
+    }
+    
+    
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+	
+    }
+    
+	@media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+	
+.sidenav input[type=number]{
+text-align:center;
+width:50%;
+align:left;
+}
+.sidenav hr{
+color:blue;
+high:10px;
+}
+
+
+
+
+.New_package select{
+
+width:15%;
+
+}
+#demo select{
+
+width:15%;
+
+}
+.New_package option{
+text-align:center;
+
+}
+#demo option{
+text-align:center;
+
+}
+.New_package
+{
+border:3px solid #87CEFA;
+margin-left: auto;
+margin-right: auto;
+margin-bottom:10%;
+margin-top:5%;
+width:60%;
+}
+#demo
+{
+border:3px solid #87CEFA;
+margin-left: auto;
+margin-right: auto;
+margin-bottom:10%;
+margin-top:5%;
+width:60%;
+}
+.New_package td
+{
+padding-left:0px;
+padding-top:5px;
+padding-bottom:5px;
+background-color:FFFFFF;
+}
+#demo td
+{
+	background-color:FFFFFF;
+padding-left:0px;
+padding-top:5px;
+padding-bottom:5px;
+
+}
+label{
+padding-left:20px;
+font-size:18px;
+}
+bbb
+.New_package,#demo th{
+background-color : #87CEFA;
+padding-left:7px;
+padding-top:9px;
+padding-bottom:6px;
+}
+
+#h{
+color:white;
+width:50;
+}
+.ID1
+{
+background-color:#87CEFA;
+border:none;
+font-size:15px;
+}
+#ap
+{
+color:red;
+}
+#tha
+{
+width:50;
+text-align:right;
+}
+
+#bbbb{
+ background-color: #1E90FF;
+        color: white;
+}
+#btnn{
+ background-color: #1E90FF;
+        color: white;
+}
+
+
+demo

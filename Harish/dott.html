@@ -1,0 +1,1518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <title>Admin Menu</title>
+  <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+</script>
+<link type="text/css" rel="stylesheet" href="css/main.css"></link>
+
+ 
+</head>
+<body onload="loadSales(this),aa();">
+
+<nav class="navbar navbar-inverse" >
+ <div class="container">
+  <img alt="" src="head1.jpg">
+</div>
+  <div class="container-fluid">
+  
+     <ul class="nav navbar-nav">
+        <li id="salesTab"><a style="cursor:pointer;" onclick="loadSales(this),aa();">Sales</a></li>
+        <li id="acctTab" ><a style="cursor:pointer;" onclick="loadAccounts(this),aa();">Accounts</a></li>
+        <li id="packagesTab"><a style="cursor:pointer;" onclick="loadAdminPackage(this),paa();">Package</a></li>
+        <li id="staffTab" ><a style="cursor:pointer;" onclick="loadStaff(this),ssaa();">Staff</a></li>
+   		<li id="invoiceTab"><a style="cursor:pointer;" onclick="loadInvoice(this),aa();">Invoice</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="Login.jsp"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      </ul>
+    
+  </div>
+</nav>
+<div id="sales" class="container-fluid text-center">
+ <div class="row content">
+    <div class="col-md-1 sidenav">
+	<p><button type="button" onclick="aa()" class="btn btn-link"  >Enquiry</button></p>
+	<p><button type="button" onclick="bb()" class="btn btn-link">Sales</button></p>
+	
+	
+    </div>
+    <div class="col-md-11 text-left" id="aa"> 
+      <div class="table-responsive">
+	  
+<h2>My Customers</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+<input type="text" id="snumber" onkeyup="SearchSalesNumber()" placeholder="By number" title="By Number">
+<input type="text" id="snumber" onkeyup="Searchexname()" placeholder="By number" title="By EXECUTIVE NAME">
+<div id="div1">
+<table id="table1">
+<tr>
+	
+    <th id="a1">SNO</th>
+    <th id="a2">EXECUTIVE_NAME</th>
+	<th id="a3">DATE_OF_QUERY</th>
+    <th id="a4">CLIENT_NAME</th>
+	<th id="a5">NO_OF_PAX</th>
+    <th id="a6">CONTACT_NO</th>
+	<th id="a7">GMAIL_ID</th>
+    <th id="a8">DESTINATION</th>
+	<th id="a9">DATE_OF_TRAVEL</th>
+    <th id="a10">STATUS_OF_THE_QUERY</th>
+	<th id="a11">CLOSURE_DATE</th>
+    <th id="a12">REMARKS</th>
+</tr>
+
+</table>
+</div>
+
+<div id="div2">
+<table id="myTable">
+<tr>
+	<td id="a1"> 			1				</td>
+	<td id="a2">	 p.mohan rao			</td>
+	<td id="a3">	 22/08/2019				</td>
+	<td id="a4">	 harish					</td>
+    <td id="a5">	4						</td>
+	<td id="a6">	9876543211				</td>
+	<td id="a7">	pndkjsn@gmail.com		</td>
+	<td id="a8">	Germany					</td>
+	<td id="a9">	12/09/2019				 </td>
+ 	<td id="a10">	pndkjsn@gmail.com		</td>
+	<td id="a11">	22/12/2019				</td>
+	<td id="a12">		jkccnkjkhbhgv 		</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> sathesh</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">22/12/2019</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">22/12/2019</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">22/12/2019</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">22/12/2019</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">22/12/2019</td>
+	<td id="a12">pndkjsn@gmail.com
+	pndkjsn@gmail.com
+	pndkjsn@gmail.com
+	pndkjsn@gmail.com
+	pndkjsn@gmail.com
+	pndkjsn@gmail.com
+	pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">22/12/2019</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">22/12/2019</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">22/12/2019</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">22/12/2019</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">22/12/2019</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">22/12/2019</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">pndkjsn@gmail.com</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">pndkjsn@gmail.com</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">pndkjsn@gmail.com</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">pndkjsn@gmail.com</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">pndkjsn@gmail.com</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">pndkjsn@gmail.com</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">pndkjsn@gmail.com</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">pndkjsn@gmail.com</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">pndkjsn@gmail.com</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">pndkjsn@gmail.com</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">pndkjsn@gmail.com</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">pndkjsn@gmail.com</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">pndkjsn@gmail.com</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">pndkjsn@gmail.com</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">pndkjsn@gmail.com</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">pndkjsn@gmail.com</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">pndkjsn@gmail.com</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">3</td>
+	<td id="a2"> p.mohan rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">pndkjsn@gmail.com</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+<tr>
+	<td id="a1">1</td>
+	<td id="a2"> p.satheh rao</td>
+	<td id="a3"> 22/08/2019</td>
+	<td id="a4"> harish</td>
+    <td id="a5">4</td>
+	<td id="a6">9876543211</td>
+	<td id="a7">pndkjsn@gmail.com</td>
+	<td id="a8">Germany</td>
+	<td id="a9">12/09/2019 </td>
+ 	<td id="a10">pndkjsn@gmail.com</td>
+	<td id="a11">pndkjsn@gmail.com</td>
+	<td id="a12">pndkjsn@gmail.com</td>
+</tr>
+
+
+</table>
+
+</div>
+
+<hr>
+<input type="button" value="Print" class="btn btn-info" style="background-color color:#FF4500; margin-left:500px;">
+ <input type="button" value="Export" class="btn btn-info" style="background-color color:#FF4500;margin-left:200px;">
+<hr>
+	</div>
+    </div>
+	
+	<div class="col-sm-11 text-left" id="bb">
+	
+	hello world!...
+	</div>
+	
+   </div>
+   
+</div> 
+<div id="Accounts" class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-md-1 sidenav">
+	<p><button type="button" onclick="aa()" class="btn btn-link"  >Link</button></p>
+	<p><button type="button" onclick="bb()" class="btn btn-link">Link</button></p>
+	
+	
+    </div>
+    <div class="col-md-11 text-left" id="aa">
+    </div>
+    
+    <div class="col-md-11 text-left" id="bb">
+    </div>
+    
+    </div>
+    </div>
+
+
+
+<div id="packages"class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-md-2 sidenav">
+	<p><button type="button" onclick="paa()" class="btn btn-link"  >New Package</button></p>
+	<p><button type="button" onclick="pbb()" class="btn btn-link">View Packages</button></p>
+	<p><button type="button" onclick="pcc()"class="btn btn-link">Delete Package</button></p>
+	
+	
+     
+    </div>
+    <div class="col-md-10 text-left" id="paa"> 
+      <div class="table-responsive" >
+      <form method="post" action="#">
+      <input type="hidden" value="addPackage" name="method"/>
+  <table  class="New_package" >
+  <tr>
+<th id="h" align="right">
+  New Package
+  </th> <th id="tha">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="button" class="ID1"><span class="glyphicon glyphicon-refresh"></span> CLEAR</button><button type="button" class="ID1" class="close"><span class="glyphicon glyphicon-remove" id="ap"></span> CLOSE</button></th></tr>
+ <tr>
+	<td>  <label>Tour Id</label> </td>
+	<td>: <input type="number" name="Tour_Name"required ></td>
+</tr>
+<tr>
+	<td>  <label>Gst Number</label> </td>
+	<td>: <select name="Gst_Number" style="width:180px;">
+					<option value="37AAGCD8245D1ZN">37AAGCD8245D1ZN</option>
+					<option value="36AAGCD8245DIZP">36AAGCD8245DIZP</option>
+					<option value="37BGXPS3317Q1Z9">37BGXPS3317Q1Z9</option>
+					<option  value="36BGXPS3317Q1ZB">36BGXPS3317Q1ZB</option>
+					</select>
+	
+	
+	&nbsp &nbsp <input type="number" name="Per" value="4" style="width:40px;text-align:center;">&nbsp%</td>
+</tr>
+<tr>
+  <td> <label>Date of Travel </label> </td>
+<td>: <input type="date"  id="txtDate" ononline ="dt()" name="date_of_Travel" required></td> 
+</tr>
+
+  <tr>
+ <td> <label>No Of Adult</label></td>
+<td>: <input type="number"id="No_Of_Adult" name="No_Of_Adult" value="0" required onchange="addpe()"></td>
+  </tr>
+ <tr>
+  <td><label>No Of Child</label></td>
+<td>: <input type="number" id="No_Of_Child" name="No_Of_Child" value="0" required onchange="addper()"> </td>
+  </tr>
+  <tr>
+  <td><label>Tour Cost Per Adult </label></td>
+<td>: <input type="number" name="Tour_Cost_Per_Adult" required  onclick="addper()"></td>
+  </tr>
+  <tr>
+  <td><label>Tour Cost Per Adult With Twin Share Base</label></td>
+<td>: <input type="number" name="Tour_Cost_Per_Adult_With_Twin_Share_Base" required></td>
+  </tr>
+  <tr>
+  <td><label>Tour Cost Per Adult With Triple Share Base </label></td>
+<td>: <input type="number"  name="Tour_Cost_Per_Adult_With_Triple_Share_Base" required></td>
+  </tr>
+  <tr>
+  <td><label>Child With Bed</label></td>
+<td>: <input type="number" name="Child_With_Bed" required></td>
+</tr>
+  <tr>
+  <td><label>Child Without Bed</label></td>
+<td> : <input type="number" name="Child_Without_Bed"  required> </td></tr>
+  <tr>
+  <td><label>Infant Cost</label> </td>
+<td> : <input type="number" name="Infant_Cost" required> </td>
+</tr>
+<tr>
+  <td><label>No Of Days</label></td>
+<td>: <input type="number"  name="No_Of_Days" required> </td>
+</tr>
+<tr>
+  <td><label>Countries Visiting</label></td>
+<td> : <input type="text" name="Countries_Visiting" required> </td>
+
+</tr>
+
+<tr>
+  <td colspan="2"> <hr><label><h2>Optional Tour </h2></label><hr></td>
+
+</tr>
+
+<tr>
+  <td><label>Description</label></td>
+<td> : <input type="text" name="Description" required> </td>
+</tr>
+<tr>
+  <td><label>Per Child</label></td>
+<td> : <input type="number" name="Per_Child" required> </td>
+</tr>
+<tr>
+  <td><label>Per Adult</label></td>
+<td> : <input type="number" name="Per_Adult" required> </td>
+</tr>
+<tr>
+  <td><label>Per Infant</label></td>
+<td> : <input type="number" name="Per_Infant" required> </td>
+</tr>
+   <tr>
+<td colspan="2" align="center">
+<button type="submit" class="btn btn-info" style="background-color color:#FF4500;">Create</button></td>
+</tr>
+</table>
+</form>
+	</div>
+    </div>
+  
+  
+<div class="col-md-10 text-left" id="pbb"> 
+  
+  
+    <div class="containe-2">
+
+        <div class="containe-2-box">
+            <table id="showpack">
+                <tr>
+                    <th style="width: 45%" id="hh1">
+                        <h3>Tour Id </h3>
+                    </th>
+                    <th id="hh2"> </th>
+                </tr>
+                <tr>
+                    <td> <label>Date of Travel:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td> <label>No Of Passengers:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td> <label>No Of Adult:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td> <label>No Of Child:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td> <label>Tour Cost Per Adult:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td> <label> With Twin Share Base:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td> <label>With Triple Share Base:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td> <label>Child With Bed:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td> <label>Child Without Bed:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td> <label>Infant Cost:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td> <label>No Of Days:</label></td>
+                    <td>:</td>
+                </tr>
+
+                <tr>
+                    <td> <label>Countries Visiting:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center" colspan="2"> <label>Optional Tour.......</label></td>
+
+                </tr>
+
+                <tr>
+                    <td> <label>Description:</label></td>
+                    <td>:</td>
+                </tr>
+
+                <tr>
+                    <td> <label>Per Child:</label></td>
+                    <td>:</td>
+                </tr>
+
+                <tr>
+                    <td> <label>Per Adult:</label></td>
+                    <td>:</td>
+                </tr>
+
+                <tr>
+                    <td> <label>Per Infant:</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td></td>
+                </tr>
+            </table>
+
+        </div>
+
+
+    </div>
+
+  
+   </div>
+<div class="col-md-10 text-left" id="pcc"> 
+	<form style="margin-top:20px;">
+	<label>Enter package name:</label>
+	<input type="text" name="deletepackage" required style="margin-right:20px;"> 
+	<button type="submit" class="btn btn-info">Delete</button>
+	
+	
+	<hr id="dhr">
+	
+	
+	</form>
+	
+	
+	
+</div>
+   </div>
+   
+
+   </div>
+
+
+ 
+ 
+<div id="staff" class="container-fluid text-center">    
+    <div class="row content">
+    <div class="col-md-2 sidenav">
+	<p><button type="button" onclick="ssaa()" class="btn btn-link"  >New Staff</button></p>
+	<p><button type="button" onclick="ssbb()" class="btn btn-link">View Staff</button></p>
+	<p><button type="button" onclick="sscc()" class="btn btn-link">Delete/Update Staff</button></p>
+	
+	
+     
+    </div>
+    <div class="col-md-10 text-left" id="ssaa"> 
+      <div class="table-responsive" >
+      <form>
+  <table  class="New_package" >
+  <tr>
+<th id="h" align="right">
+  New Staff
+  </th>
+  <th id="tha">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="button" class="ID1">
+          <span class="glyphicon glyphicon-refresh"></span> CLEAR
+        </button>
+		<button type="button" class="ID1" class="close">
+          <span class="glyphicon glyphicon-remove" id="ap">
+</span> CLOSE
+        </button>
+		</th>
+ </tr>
+ <tr><td><hr></hr></td><td><hr></hr></td></tr> 
+<tr>
+<td>
+<label>Staff Id :</label>
+</td>
+<td ><label>Password : </label></td>
+</tr>
+ <tr>
+	<td><input type="text" class="l1" id="sid"name="staff_id"  required></td><td><input type="text" id="psw" name="Password" required></td>
+</tr>
+<tr>
+<td>  <label>Full Name :</label> </td><td></td>
+</tr>
+<tr>
+<td><input type="text" class="l1" id="fn" name="First_Name" required></td><td><input type="text" id="ln" name="Last_Name" required></td>
+</tr>
+
+<tr>
+	<td>  <label class="l1">First Name </label> 
+	 </td>
+
+	<td>  <label class="l2">Last Name </label>
+	 
+</tr>
+
+<tr> 
+  <td><label>Birthday:</label></td><td></td>
+</tr>
+
+<tr>
+<td><input type="date" class="l1" id="Date_Of_Birth" name="bday" required></td><td></td>
+</tr>
+
+
+
+<tr>
+<td>
+	<label>Phn No :</label> <input type="number" id="phn" class="l1"name="Phone_num" required></td><td><label>Branch:</label> <select id="branch" class="l1"name="Branch" required>
+ <option  type="text">
+
+  </option>
+
+  <option value="Andhra Pradesh">Andhra Pradesh</option>
+  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+  <option value="Assam">Assam</option>
+  <option value="Bihar">Bihar</option>
+  <option value="Chhattisgarh">Chhattisgarh</option>
+  <option value="Goa">Goa</option>
+  <option value="Gujarat">Gujarat</option>
+  <option value="Haryana">Haryana</option>
+  <option value="Himachal">Himachal Pradesh</option>
+  <option value="Jammu & Kashmir">Jammu & Kashmir</option>
+  <option value="Jharkhand">Jharkhand</option>
+  <option value="Karnataka">Karnataka</option>
+  <option value="Kerala">Kerala</option>
+  <option value="Madhya Pradesh">Madhya Pradesh</option>
+ <option value="Maharashtra">Maharashtra</option>
+  <option value="Manipur">Manipur</option>
+  <option value="Meghalaya">Meghalaya</option>
+  <option value="Mizoram">Mizoram</option>
+  <option value="Nagaland">Nagaland</option>
+  <option value="Odisha">Odisha</option>
+  <option value="Punjab">Punjab</option>
+  <option value="Rajasthan">Rajasthan</option>
+  <option value="Sikkim">Sikkim</option>
+  <option value="Tamil Nadu">Tamil Nadu</option>
+   <option value="Telangana">Telangana</option>
+   <option value="Uttarakhand">Uttarakhand</option>
+   <option value="Uttar Pradesh">Uttar Pradesh</option>
+   <option value="West Bengal">West Bengal</option>
+   
+</select></td>
+	
+</tr>
+<tr><td><hr></hr></td><td><hr></hr></td></tr> 
+ <tr>
+  <td><label>Address :</label></td><td></td>
+  </tr>
+ <tr><td><hr></hr></td><td><hr></hr></td></tr> 
+<tr>
+<td ><input type="text" id="dn"class="l1"name="Door_Num" required></td><td></td>
+</tr>
+<tr>
+<td> <label class="l1">Door no/House no </label></td><td></td>
+</tr>
+<tr>
+  
+  <td ><input type="text" id="sn" class="l1" name="Street_Name" required></td><td></tdx>
+  </tr>
+  
+   <tr><td ><label class="l1">Street name  </label> </td><td></td>
+   </tr>
+   <tr>
+  <td > <form><input type="text" class="l1" id="ct" name="City" required></form></td><td ><input type="text" id="st" name="State" required></td>
+  </tr>
+  <tr>
+  <td ><label class="l1">City  </label></td><td ><label class="l2">State  </label></td>
+  </tr>  
+  <tr>
+  <td ><input type="text" class="l1" id="pc" name="Pincode" required></td><td></td>
+  </tr>
+<tr><td ><label class="l1">Pin code  </label></td> <td></td>
+
+  </tr>
+ 
+ 
+   <tr>
+<td colspan="2" align="center">
+<button type="submit" class="btn btn-info" onclick="alerts()" style="background-color color:#FF4500;">Create</button></td>
+</tr>
+</table>
+</form>
+	</div>
+    </div>
+   
+   
+   
+   <div class="col-md-10 text-left" id="ssbb"> <br><br>
+   <input type="text" id="stfname" onkeyup="SearchStaffbyname()" placeholder="Search for names.." >
+   <input type="text" id="stfnumber" onkeyup="SearchStaffbynumber()" placeholder="By number.." >
+<input type="text" id="stfbranch" onkeyup="SearchStaffbybranch()" placeholder="By Branch.." >
+
+   <div id="div1">
+   
+<table id="table1">
+<tr>
+	
+    <th id="a1">Staff_Id</th>
+	<th id="a2">Password</th>
+    <th id="a2">Name</th>
+	<th id="a4">Date_Of_Birth</th>
+	<th id="a5">Contact_No.</th>
+	<th id="a2">Branch</th>
+	<th id="a6">Address</th>
+   
+</tr>
+
+</table>
+</div>
+
+<div id="div2">
+<table id="table2">
+<tr>
+	<td id="a1">1</td>
+	<td id="a2">********</td>
+	<td id="a3"> harish</td>
+	<td id="a4"> 22/08/2019</td>
+	<td id="a5">9876543211</td>
+	<td id="a2">Germany</td>
+	<td id="a6">3/154 sanjai gandhi nager katheru</td>
+	
+</tr>
+</table>
+
+</div>
+   </div>
+<div class="col-md-10 text-left" id="sscc"> 
+<div Style=" width:100%">
+<form Style="float:left; margin-top:40px; " >
+<label>Staff Id :</label> <input type="text" name="Seaarchstaff" style="margin-right:30px;"><button type="submit" class="btn btn-info"  style="background-color color:#FF4500; margin-right:30px;">Seaarch</button>
+
+<form Style="float:right; ">
+<button type="submit" class="btn btn-info"  style="background-color color:#FF4500; margin-right:30px;">Delete</button><hr id="dhr">
+
+</form>
+
+</form>
+
+</div>
+
+
+<form Style="float:left; margin-top:40px;" >
+	<label>Staff_Id :</label><input type="text" name="Updatestaffid" style="margin-right:20px;margin-left:10px;">
+<label>	Password :</label><input type="text" name="Updateped" style="margin-right:20px;margin-left:10px;">
+ <label>Name :</label><input type="text" name="Updatename" style="margin-right:20px;margin-left:10px;">
+	<label>Date_Of_Birth :</label><input type="date" name="Updatedob" >
+	<br><br><br><label>Contact_No :</label><input type="text" name="Updatecn" style="margin-right:20px;margin-left:10px;">
+	<label>Branch :</label><input type="text" name="Updatebranch" style="margin-right:20px;margin-left:10px;">
+	<label>Address :</label><input type="text" name="Updateaddress" style="margin-right:20px;margin-left:10px; width:500px;"><br>
+	<hr id="dhr">
+	
+	
+<center><button type="submit" class="btn btn-info"  style="background-color color:#FF4500; margin-right:30px;">Update</button></center>
+<hr id="dhr">
+</form>
+
+</div>
+   
+   </div>
+   
+
+
+
+   </div>
+
+
+</div>
+  </div>
+   
+   
+
+<div id="invoice" class="container-fluid text-center">    
+    <div class="row content">
+    <div class="col-md-2 sidenav">
+	<p><button type="button" onclick="iaa()" class="btn btn-link"  >Link</button></p>
+	<p><button type="button" onclick="ibb()" class="btn btn-link">Link</button></p>
+	<p><button type="button" onclick="icc()" class="btn btn-link">link</button></p>
+	
+	
+     
+    </div>
+    <div class="col-md-10 text-left" id="ssaa"> 
+   
+
+
+
+<table style="width: 100%" ;>
+            <tr>
+                <th style="text-align: end"  ><img class="hello" src="img-1.jpg" alt="hiii"></th><th style="padding-right:80px;"><img class="hellooo" src="img-2.png" alt=""></th>
+            </tr>
+			</table>
+    <div class="matter">
+	 
+        <table style="width: 100%" ;>
+            <tr>
+                <th><br></br> No: 14373925, GST NO: AP-37BGXPS3317QIZ9</th>
+            </tr>
+            <tr>
+                <th>Vijayawada Branch: 40-6-11, Ground Floor, Meenakshi Towers, Opp: Sub way, Hotel Fortune Muralipark road,</th>
+            </tr>
+            <tr>
+                <th>Mogalrajpuram, Vijayawada-520010. Contact: 77996-83666.</th>
+            </tr>
+            <tr>
+                <th>CIN: U63090TG2018PTC126379; email: dottholidaysvga@gmail.com.</th>
+            </tr>
+
+
+        </table>
+        <hr id="ihr">
+    </div>
+    <div id="hari">
+
+        <h3 style="width: 190px; height:50px;">INVOICE</h3>
+    </div>
+    <div id="sh">
+        <h3>BILL</h3>
+    </div>
+    <div class="main">
+        <div class="bro">
+		<center>
+            <table style="width: 95%">
+                <tr>
+                    <td>Invoice No: DTT 257 </td>
+                    <td style="text-align: end">Date: 06-08-2019</td>
+                </tr>
+                <tr>
+                    <td>GST No: 37BGXPS3317QIZ9<br></br>
+                    </td>
+                    <td style="text-align: end">Place: Vijayawada<br></br>
+                    </td>
+                </tr>
+            </table>
+			</center>
+        </div>
+        <div class="ccc">
+
+            <table style="width: 100%">
+                <tr>
+                    <td>TO:Mr.G.KUTESWARA RAO Garu & Family (2 pax) </td>
+                    <td style="text-align: end">DST: EUROPE &INDIA</td>
+                </tr>
+                <tr>
+                    <td>DEPUTY MANAGER,</td>
+                    <td></td>
+                </tr>
+                <td>STATE BANK OF INDIA,</td>
+                <td></td>
+                </tr>
+                <tr>
+                    <td>37AAACS8577K1ZO</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td> ADMNISTRATIVE OFFICE,</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>VIJAYAWADA.</td>
+                    <td></td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="ddd">
+            <table style="width: 100%">
+                <tr>
+                    <th>PARTICULARS</td>
+                        <th>AMOUNT</td>
+
+                </tr>
+                <tr>
+                    <td><br></br>TRANSPORTATION CHARGES FOR 2 PAX IN EUROPE</td>
+                    <td style="text-align: center"><br></br>87,450.00</td>
+
+                </tr>
+
+                <tr>
+                    <td>VOUCHER DATED: 23-07-2019<br></br>
+                    </td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+                    <td>GST 5%<br></br>
+                    </td>
+                    <td style="text-align: center">4,372.00<br></br>
+                    </td>
+
+                </tr>
+
+                </tr>
+                <tr>
+                    <td>TOTAL AIR FARES OF 2 PAX<br></br><br></br>
+                    </td>
+                    <td style="text-align:center"> 1,68,178.00 <br></br><br></br>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>Grand Total in Words:</td>
+                    <td style="text-align: center">2,60,000.00 </td>
+
+                </tr>
+                <tr>
+                    <td>Two lakhs sixty thousand rupees only.</td>
+                    <td></td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="last">
+            <h3>PAYMENT DETAILS:</h3>
+            <P>Paid the tour cost Per Pax 1, 30,000/- , total Pax 2 = 2,60,000/- by cheque and ac transfer/cash. </P>
+            <p><b>THANKING YOU AND ASSURING YOU OF OUR BEST SRVICES AT ALL TIMES.</b></p>
+        </div>
+        <div class="footer">
+            <p>DIRECTION OF TRAVEL TOURS </p>
+            <P>CASH/CHEQUE:<b> 2,60,000/-</b></P>
+            <P>RECEIVED </P>
+            <P>VIJAYAWADA</P>
+        </div>
+
+    </div>    
+	</div>
+	</div>
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+
+</body>
+<script>
+
+/* sales*/
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[3];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+function Searchexname() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+function SearchSalesNumber() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("snumber");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[5];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+function aa()
+{
+ var x = document.getElementById("aa");
+var y= document.getElementById("bb");
+var z= document.getElementById("cc");
+ y.style.display="none";
+    x.style.display = "block";
+    z.style.display="none";
+}
+function bb()
+{
+ var x = document.getElementById("bb");
+var y = document.getElementById("aa");
+var z= document.getElementById("cc");
+y.style.display="none";
+z.style.display="none";
+x.style.display = "block";
+}
+function cc()
+{
+ var x = document.getElementById("aa");
+var y= document.getElementById("bb");
+var z= document.getElementById("cc");
+ y.style.display="none";
+    x.style.display = "none";
+    z.style.display="block";
+}
+
+
+
+/* account*/
+
+/* packages*/
+function paa()
+{
+ var x = document.getElementById("paa");
+var y= document.getElementById("pbb");
+var z= document.getElementById("pcc");
+ y.style.display="none";
+    x.style.display = "block";
+    z.style.display="none";
+}
+function pbb()
+{
+ var x = document.getElementById("pbb");
+var y = document.getElementById("paa");
+var z= document.getElementById("pcc");
+y.style.display="none";
+z.style.display="none";
+x.style.display = "block";
+}
+function pcc()
+{
+ var x = document.getElementById("paa");
+var y= document.getElementById("pbb");
+var z= document.getElementById("pcc");
+ y.style.display="none";
+    x.style.display = "none";
+    z.style.display="block";
+}
+function addper() {
+	  var x =parseInt(document.getElementById("No_Of_Adult").value);
+	  var y= parseInt(document.getElementById("No_Of_Child").value);
+	  var z=x+y;
+	alert("no of Passengers ="+z);
+	  
+	}
+	
+function addpe() {
+	  var x =parseInt(document.getElementById("No_Of_Adult").value);
+	  var y= parseInt(document.getElementById("No_Of_Child").value);
+	  var z=x+y;
+	alert("no of Passengers ="+z);
+	  document.getElementById("No_Of_Passengers").value =  z;
+	}
+
+/* staff*/
+function ssaa()
+{
+ var x = document.getElementById("ssaa");
+var y= document.getElementById("ssbb");
+var z= document.getElementById("sscc");
+ y.style.display="none";
+    x.style.display = "block";
+    z.style.display="none";
+}
+function ssbb()
+{
+ var x = document.getElementById("ssbb");
+var y = document.getElementById("ssaa");
+var z= document.getElementById("sscc");
+y.style.display="none";
+z.style.display="none";
+x.style.display = "block";
+}
+function sscc()
+{
+ var x = document.getElementById("ssaa");
+var y= document.getElementById("ssbb");
+var z= document.getElementById("sscc");
+ y.style.display="none";
+    x.style.display = "none";
+    z.style.display="block";
+}
+/* invoice*/
+
+function SearchStaffbyname() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("stfname");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("table2");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[2];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+function SearchStaffbynumber() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("stfnumber");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("table2");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[4];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+function SearchStaffbybranch() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("stfbranch");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("table2");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[5];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+<script>
+  
+  function addActive(elem){
+	  elem.addClass( "active" );
+  }
+  function removeActive(elem){
+	  elem.removeClass( "active" );
+  }
+  function loadSales(event){
+	  $('#sales').show();
+	  $('#staff').hide();
+	   $('#Accounts').hide();
+	  $('#packages').hide();
+	  $('#invoice').hide();
+	  addActive($('#salesTab'));
+	  removeActive($('#staffTab'));
+	  removeActive($('#packagesTab'));
+	  removeActive($('#invoiceTab'));
+	  removeActive($('#Accounts'));
+  }
+  function loadAdminPackage(event){
+	  $('#sales').hide();
+	   $('#Accounts').hide();
+	  $('#staff').hide();
+	  $('#packages').show();
+	  $('#invoice').hide();
+	  addActive($('#packagesTab'));
+	  removeActive($('#staffTab'));
+	  removeActive($('#salesTab'));
+	  removeActive($('#invoiceTab'));
+	  removeActive($('#Accounts'));
+  }
+  function loadStaff(event){
+	  $('#sales').hide();
+	  $('#Accounts').hide();
+	  $('#packages').hide();
+	  $('#staff').show();
+	  $('#invoice').hide();
+	  addActive($('#staffTab'));
+	  removeActive($('#packagesTab'));
+	  removeActive($('#salesTab'));
+	  removeActive($('#invoiceTab'));
+	  removeActive($('#Accounts'));
+  }
+  function loadInvoice(event){
+	  $('#sales').hide();
+	  $('#Accounts').hide();
+	  $('#packages').hide();
+	  $('#staff').hide();
+	  $('#invoice').show();
+	  addActive($('#invoiceTab'));
+	  removeActive($('#packagesTab'));
+	  removeActive($('#salesTab'));
+	  removeActive($('#staffTab'));
+	  removeActive($('#Accounts'));
+  }
+  function loadAccounts(event){
+	  $('#sales').hide();
+	  $('#Accounts').show();
+	  $('#packages').hide();
+	  $('#staff').hide();
+	  $('#invoice').hide();
+	  addActive($('#Accounts'));
+	  removeActive($('#packagesTab'));
+	  removeActive($('#salesTab'));
+	  removeActive($('#staffTab'));
+	  removeActive($('#invoiceTab'));
+  }
+ 
+  function submitPackage(){
+	  
+  }
+  function dt(){
+  var today = new Date().toISOString().split('T')[0];
+document.getElementsByName("somedate")[0].setAttribute('min', today);
+  
+  
+  }
+  
+  
+  
+  </script>
+</html>
+
